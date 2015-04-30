@@ -2,13 +2,16 @@
 
 This software package provides tools to perform multi-label classification/regression (i.e., given an input signal, predict multi-dimensional output labels). It includes MATLAB implementations of Bayesian Compressed Sensing (BCS) [1] and Bayesian Group-sparse Compressed Sensing (BGCS) [2], which extends BCS by considering group structures in the output label space. 
 
-Copyright (c) 2015 Yale Song (yalesong@csail.mit.edu). Permissions are granted under the MIT License (MIT).  
-
 [1] Ashish Kapoor, Raajay Viswanathan, and Prateek Jain. "Multilabel classification using bayesian compressed sensing." NIPS 2012.
 
 [2] Yale Song, Daniel McDuff, Deepak Vasisht, and Ashish Kapoor. "Exploiting sparsity and co-occurrence structure for action unit recognition." IEEE FG 2015.
 
+Copyright (c) 2015 Yale Song (yalesong@csail.mit.edu). <br>
+Permissions are granted under the MIT License (MIT).
+
+
 # Contents
+To start experimenting with the package, please see <code>./run_demo.m</code>
 ```
 ./license.txt : copy of the MIT License
 ./run_demo.m  : MATLAB demo script 
