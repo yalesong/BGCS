@@ -2,7 +2,8 @@
 % Demo script for Bayesian Compressed Sensing (BCS) and Bayesian 
 %   Group-Sparse Compressed Sensing (BGCS) 
 %
-% Before running this demo script, please download the following two files:
+% Before running this demo script, please download the following two files
+% and place both files under the directory ./data/:
 %
 %  (1) http://people.csail.mit.edu/yalesong/fg15/CK+_hog2.mat
 %   : pHOG features we extracted from the CK+ dataset, courtesy of
@@ -14,7 +15,7 @@
 %   : AU labels we use to learn AU group structures, courtesy of
 %    K. S. Kassam. "Assessment of emotional experience through facial 
 %    expression." PhD thesis, Harvard, 2010.
-%  
+%
 % After running the script, you should get an output similar to following:
 %   > Experiment with [bcs]
 %   > Experiment with [bgcs]
