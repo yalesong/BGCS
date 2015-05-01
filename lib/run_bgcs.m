@@ -119,11 +119,16 @@ function R = run_bgcs( trnFtMat, trnLblMat, valFtMat, tstFtMat, group_data, ...
 end
 
 
-function group = get_group( group_data, thresh )
-    if ~exist('thresh','var'),
-        thresh = .50;
+function group = get_group( co_occur, thresh )
+    group = cell(1,size(co_occur,1));
+    for i=1:size(co_occur,1),
+        co_occur_i = co_occur(i,:);
+        p_co_occur_i = co_occur_i / co_occur(i,i);
+        au_above_thresh = find(p_co_occur_i>=thresh);
+        group{i} = au_above_thresh;
     end
-        
+    
+    %{
     AU_cnt = sum(group_data);
     
     group = {};
@@ -133,6 +138,7 @@ function group = get_group( group_data, thresh )
         au_above_thresh = find(p_co_occur>=thresh);
         group{i} = au_above_thresh;
     end 
+    %}
 end
 
 

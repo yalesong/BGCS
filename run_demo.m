@@ -12,7 +12,7 @@
 %    action unit and emotion-specified expression." In CVPR, 2010.
 %
 %  (2) http://people.csail.mit.edu/yalesong/fg15/Kassam_AU.mat
-%   : AU labels we use to learn AU group structures, courtesy of
+%   : AU co-occurrence stats we use to learn group structure, courtesy of
 %    K. S. Kassam. "Assessment of emotional experience through facial 
 %    expression." PhD thesis, Harvard, 2010.
 %
@@ -92,10 +92,13 @@ for i=1:nfolds,
     tstLblMat{i} = tstLblMat{i}(:,AUs); 
 end
 
-% Load Kassam data for learning AU group structure
-AU_group_initialization_data = load('./data/Kassam_AU.mat');
-group_data = AU_group_initialization_data.data(AUs,:)';
-
+% Load Kassam AU co-occurrence data for learning AU group structure
+%   kassam_co_occur is a 100 x 100 matrix of AU co-occurrence statistics. 
+%   Each row shows how many times each AU appears with each other AU. 
+%   For example, kassam_co_occur(1,:) shows how many times each of 100 AUs 
+%   co-occurs with AU 1.
+kassam = load('./data/Kassam_AU.mat'); 
+group_data = kassam.kassam_co_occur(AUs,AUs);
 
 
 %% Run experiment 
