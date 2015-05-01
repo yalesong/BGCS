@@ -9,7 +9,7 @@
 %   : pHOG features we extracted from the CK+ dataset, courtesy of
 %    P. Lucey, J. F. Cohn, T. Kanade, J. Saragih, Z. Ambadar, and I. Matthews. 
 %    "The Extended Cohn-Kanade Dataset (CK+): A complete dataset for 
-%    action unit and emotion-specified expression." In CVPR, 2010.
+%    action unit and emotion-specified expression." In CVPRW, 2010.
 %
 %  (2) http://people.csail.mit.edu/yalesong/fg15/Kassam_AU.mat
 %   : AU co-occurrence stats we use to learn group structure, courtesy of
