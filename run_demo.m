@@ -76,7 +76,7 @@ D = load('./data/CK+_hog2.mat');
 
 y=[D.data.labels]';
 y=y(:,AUs); 
-data(find(sum(y')==0))=[];
+D.data(find(sum(y')==0))=[];
 
 nfolds = numel(unique({D.data.subject})); % leave-one-subject-out
 [trn,val,tst] = split_data(D.data,nfolds);
